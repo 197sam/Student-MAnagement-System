@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div id="login-container" class="login-container">
+        <h2>Student Login</h2>
+        <form id="studentLoginForm" onsubmit="handleStudentLogin(event)">
+            <div class="form-group">
+                <label for="student-email">Email</label>
+                <input type="email" id="student-email" required>
+            </div>
+            <button type="submit">Login</button>
+            <p id="error-message"></p>
+        </form>
+    </div>
+
+    <div id="student-list-container" class="student-list-container" style="display: none;">
+        <h2>Student List</h2>
+        <table id="student-list">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                    <th>Degree</th>
+                </tr>
+            </thead>
+            <tbody id="student-list-body">
+                <!-- Student data will be populated here -->
+            </tbody>
+        </table>
+        <button onclick="logout()">Logout</button>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>
